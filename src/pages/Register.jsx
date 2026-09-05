@@ -22,6 +22,8 @@ const Register = () => {
       return;
     }
 
+    const defaultCredits = form.role === "creator" ? 20 : 50;
+
     setLoading(true);
     try {
       let photoURL = "";
@@ -35,6 +37,7 @@ const Register = () => {
         password: form.password,
         role: form.role,
         photoURL,
+        credits: defaultCredits,
       });
 
       if (error) {
@@ -43,7 +46,7 @@ const Register = () => {
         return;
       }
 
-      toast.success(`Welcome! You've been credited ${form.role === "creator" ? 20 : 50} starting credits.`);
+      toast.success(`Welcome! You've been credited ${defaultCredits} starting credits.`);
       window.location.assign("/dashboard");
     } catch (err) {
       toast.error(err.message || "Something went wrong");
