@@ -19,7 +19,7 @@ const Footer = () => (
         <a href="https://github.com/theashikulakash/riseflow" target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:text-amber">
           <FiGithub size={20} />
         </a>
-        <a href="https://linkedin.com/in/your-username" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-amber">
+        <a href="https://linkedin.com/in/theashikulakash" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-amber">
           <FiLinkedin size={20} />
         </a>
         <a href="https://facebook.com/theashikulakash" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-amber">
