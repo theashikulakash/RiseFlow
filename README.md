@@ -13,7 +13,7 @@ RiseFlow makes crowdfunding more structured and accessible by connecting campaig
 - Email/password registration and login through Better Auth.
 - Google OAuth sign-in.
 - Role-aware dashboards for Supporters, Creators, and Admins.
-- Protected routes that wait for session and profile loading.
+- Protected routes that wait for session and profile loading server data.
 - Supporter contribution history, statistics, approved contributions, and credit purchases.
 - Creator campaign creation, campaign management, contribution review, and withdrawals.
 - Admin campaign approval, user management, withdrawal processing, and reports.
