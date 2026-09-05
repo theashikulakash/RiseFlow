@@ -27,6 +27,12 @@ const Footer = () => (
         </a>
       </div>
     </div>
+
+    <div className="border-t border-white/10">
+      <div className="max-w-6xl mx-auto px-5 py-4 text-center text-sm text-cream/60">
+        © {new Date().getFullYear()} RiseFlow. All rights reserved.
+      </div>
+    </div>
   </footer>
 );
 
