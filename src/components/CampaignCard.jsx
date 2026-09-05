@@ -36,7 +36,7 @@ const CampaignCard = ({ campaign }) => {
           to={`/campaigns/${campaign._id}`}
           className="btn-secondary text-center mt-3 text-sm"
         >
-          View details
+          Explore details
         </Link>
       </div>
     </div>
