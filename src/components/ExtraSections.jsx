@@ -65,7 +65,7 @@ export const ExploreByCategory = () => (
 );
 
 export const PlatformImpact = () => (
-  <section className="bg-ink text-cream py-20">
+  <section className="bg-teal-light/50 text-cream py-20">
     <div className="max-w-6xl mx-auto px-5">
       <div className="mb-12">
         <span className="text-amber text-sm font-medium">By the numbers</span>
