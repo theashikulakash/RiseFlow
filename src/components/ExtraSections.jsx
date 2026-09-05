@@ -80,5 +80,32 @@ export const PlatformImpact = () => (
         ))}
       </div>
     </div>
+
+    <div className="max-w-6xl mx-auto px-5 mt-16">
+      <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] items-center gap-8">
+          <div>
+            <span className="text-amber text-sm font-medium">Why it matters</span>
+            <h3 className="text-3xl mt-2">Ideas get resources, not just attention.</h3>
+            <p className="mt-4 text-base text-cream/70 leading-relaxed">
+              RiseFlow helps creators turn early momentum into real support. Instead of chasing scattered donations,
+              they gain a clear path to funding, updates, and community trust. Supporters can back projects they believe in,
+              track progress, and see the outcomes of each contribution in a transparent system.
+            </p>
+          </div>
+
+          <div className="grid gap-4">
+            <div className="rounded-2xl bg-teal/10 border border-teal/20 p-5">
+              <p className="text-sm text-amber font-medium">For creators</p>
+              <p className="mt-2 text-sm text-cream/75">Launch faster, validate demand, and keep supporters engaged through every milestone.</p>
+            </div>
+            <div className="rounded-2xl bg-amber/10 border border-amber/20 p-5">
+              <p className="text-sm text-amber font-medium">For supporters</p>
+              <p className="mt-2 text-sm text-cream/75">Back meaningful ideas with confidence, monitor progress, and help turn local momentum into public impact.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 );
