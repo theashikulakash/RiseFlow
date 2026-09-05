@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "Amara Osei",
+    name: "Sunio Hunikawa",
     role: "Backed 6 campaigns",
     photo: "https://i.pravatar.cc/100?img=32",
     quote:
