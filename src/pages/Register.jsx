@@ -37,7 +37,6 @@ const Register = () => {
         password: form.password,
         role: form.role,
         photoURL,
-        credits: defaultCredits,
       });
 
       if (error) {
