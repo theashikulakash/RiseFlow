@@ -9,7 +9,7 @@ const steps = [
 ];
 
 const categories = [
-  { name: "Technology", count: "Hardware, apps & tools" },
+  { name: "Technologies", count: "Hardware, apps & tools" },
   { name: "Art", count: "Film, music & design" },
   { name: "Community", count: "Local & civic projects" },
   { name: "Health", count: "Care & wellbeing" },
