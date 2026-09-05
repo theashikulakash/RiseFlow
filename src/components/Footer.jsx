@@ -1,7 +1,7 @@
 import { FiGithub, FiLinkedin, FiFacebook } from "react-icons/fi";
 
 const Footer = () => (
-  <footer className="bg-teal-dark text-cream mt-24">
+  <footer className="bg-ink text-cream mt-0">
     <div className="max-w-6xl mx-auto px-5 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
       <div className="flex items-center gap-2">
         <svg width="26" height="26" viewBox="0 0 32 32">
