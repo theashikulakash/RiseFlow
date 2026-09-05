@@ -22,7 +22,7 @@ const Footer = () => (
         <a href="https://linkedin.com/in/your-username" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-amber">
           <FiLinkedin size={20} />
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-amber">
+        <a href="https://facebook.com/theashikulakash" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-amber">
           <FiFacebook size={20} />
         </a>
       </div>
