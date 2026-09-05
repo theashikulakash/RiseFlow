@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { signIn, signUp } from "../lib/auth-client";
-import { useAuth } from "../context/AuthContext.jsx";
 import { uploadToImgBB } from "../lib/imgbb.js";
 import { FcGoogle } from "react-icons/fc";
 
@@ -12,8 +11,6 @@ const Register = () => {
   const [form, setForm] = useState({ name: "", email: "", password: "", role: "supporter" });
   const [imageFile, setImageFile] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { refreshProfile } = useAuth();
-  const navigate = useNavigate();
 
   const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -46,9 +43,8 @@ const Register = () => {
         return;
       }
 
-      await refreshProfile();
       toast.success(`Welcome! You've been credited ${form.role === "creator" ? 20 : 50} starting credits.`);
-      navigate("/dashboard");
+      window.location.assign("/dashboard");
     } catch (err) {
       toast.error(err.message || "Something went wrong");
     } finally {

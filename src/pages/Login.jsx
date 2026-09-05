@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import { signIn } from "../lib/auth-client";
-import { useAuth } from "../context/AuthContext.jsx";
 import { FiMail, FiLock } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 
@@ -10,8 +9,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const { refreshProfile } = useAuth();
-  const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/dashboard";
 
@@ -25,9 +22,8 @@ const Login = () => {
       toast.error(error.message || "Invalid email or password");
       return;
     }
-    await refreshProfile();
     toast.success("Welcome back!");
-    navigate(from, { replace: true });
+    window.location.assign(from);
   };
 
   const handleGoogle = async () => {
