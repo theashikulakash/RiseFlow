@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext.jsx";
 import NotificationBell from "./NotificationBell.jsx";
@@ -9,7 +9,14 @@ const GITHUB_CLIENT_REPO = "https://github.com/theashikulakash/riseflow";
 const Navbar = () => {
   const { user, logout } = useAuth();
   const [open, setOpen] = useState(false);
+  const [avatarVersion, setAvatarVersion] = useState(0);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleProfileImageUpdate = () => setAvatarVersion((v) => v + 1);
+    window.addEventListener("profile-image-updated", handleProfileImageUpdate);
+    return () => window.removeEventListener("profile-image-updated", handleProfileImageUpdate);
+  }, []);
 
   const linkClass = ({ isActive }) =>
     `text-sm font-medium transition-colors ${
@@ -45,7 +52,7 @@ const Navbar = () => {
               <Link
                 to="/profile"
                 className="inline-flex rounded-full ring-2 ring-white shadow-sm hover:ring-teal transition-all"
-                key={user.photoURL || user.image || user.name}
+                key={`${user.photoURL || user.image || user.name}-${avatarVersion}`}
               >
                 <img
                   src={user.photoURL || user.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=0F5257&color=fff`}

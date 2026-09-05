@@ -40,6 +40,7 @@ const UserProfile = () => {
       const uploadedUrl = await uploadToImgBB(file);
       await updateUserImage(uploadedUrl);
       updateProfile({ image: uploadedUrl, photoURL: uploadedUrl });
+      window.dispatchEvent(new CustomEvent("profile-image-updated", { detail: { imageUrl: uploadedUrl } }));
       await refreshProfile();
       toast.success("Profile picture updated successfully.");
     } catch (error) {
