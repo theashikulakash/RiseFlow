@@ -4,7 +4,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext.jsx";
 import NotificationBell from "./NotificationBell.jsx";
 
-const GITHUB_CLIENT_REPO = "https://github.com/your-username/crowdfunding-client";
+const GITHUB_CLIENT_REPO = "https://github.com/theashikulakash/riseflow";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -43,7 +43,7 @@ const Navbar = () => {
           {user ? (
             <div className="flex items-center gap-3">
               <img
-                src={user.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=0F5257&color=fff`}
+                src={user.photoURL || user.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=0F5257&color=fff`}
                 alt={user.name}
                 className="h-8 w-8 rounded-full object-cover"
                 title={user.name}

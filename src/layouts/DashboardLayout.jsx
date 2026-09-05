@@ -44,7 +44,7 @@ const DashboardLayout = () => {
         <div className="px-6 py-5 border-b border-cream/10">
           <div className="flex items-center gap-3">
             <img
-              src={user?.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(user?.name || "U")}&background=F2A541&color=122622`}
+              src={user?.photoURL || user?.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(user?.name || "U")}&background=F2A541&color=122622`}
               className="h-10 w-10 rounded-full object-cover"
               alt=""
             />
