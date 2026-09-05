@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink font-body;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+::selection {
+  background: #F2A541;
+  color: #122622;
+}
+
+.btn-primary {
+  @apply bg-teal text-cream px-5 py-2.5 rounded-md font-medium hover:bg-teal-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-teal text-teal px-5 py-2.5 rounded-md font-medium hover:bg-teal-light transition-colors;
+}
+
+.btn-amber {
+  @apply bg-amber text-ink px-5 py-2.5 rounded-md font-medium hover:bg-amber-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.input {
+  @apply w-full border border-teal/20 rounded-md px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-teal/40 text-sm;
+}
+
+.card {
+  @apply bg-white rounded-lg border border-teal/10 shadow-sm;
+}
+
+.table-wrap table {
+  @apply w-full text-sm;
+}
+
+.table-wrap th {
+  @apply text-left font-medium text-ink/60 border-b border-teal/10 py-2.5 px-3;
+}
+
+.table-wrap td {
+  @apply border-b border-teal/5 py-2.5 px-3 align-middle;
+}
+
+.badge {
+  @apply inline-block text-xs font-medium px-2.5 py-1 rounded-full;
+}
+.badge-pending { @apply bg-amber/20 text-amber-dark; }
+.badge-approved { @apply bg-teal/15 text-teal-dark; }
+.badge-rejected { @apply bg-red-100 text-red-700; }
+.badge-suspended { @apply bg-gray-200 text-gray-600; }
