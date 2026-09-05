@@ -6,6 +6,7 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import ExploreCampaigns from "./pages/ExploreCampaigns.jsx";
 import CampaignDetails from "./pages/CampaignDetails.jsx";
+import UserProfile from "./pages/UserProfile.jsx";
 import DashboardLayout from "./layouts/DashboardLayout.jsx";
 import PrivateRoute from "./routes/PrivateRoute.jsx";
 import RoleRoute from "./routes/RoleRoute.jsx";
@@ -58,6 +59,7 @@ function App() {
       <Route path="/register" element={<PublicLayout><Register /></PublicLayout>} />
       <Route path="/campaigns" element={<PublicLayout><ExploreCampaigns /></PublicLayout>} />
       <Route path="/campaigns/:id" element={<PublicLayout><CampaignDetails /></PublicLayout>} />
+      <Route path="/profile" element={<PrivateRoute><PublicLayout><UserProfile /></PublicLayout></PrivateRoute>} />
 
       {/* Dashboard layout (private) */}
       <Route
