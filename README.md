@@ -4,7 +4,7 @@ The frontend application for **RiseFlow**, a full-stack crowdfunding platform wh
 
 ## Motive
 
-RiseFlow makes crowdfunding more structured and accessible by connecting campaign creators with supporters through a transparent credit-based funding flow. The client gives each user a responsive interface for discovering campaigns, managing contributions, and completing role-specific tasks.
+RiseFlow makes crowdfunding more structured and accessible by connecting campaign creators with supporters through a transparent credit-based funding flow. The client gives each user a responsive interface for discovering campaigns, managing contributions, and completing role-specific tasks and purpose.
 
 ## Features
 
