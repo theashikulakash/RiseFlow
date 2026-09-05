@@ -16,9 +16,9 @@ const categories = [
 ];
 
 const stats = [
-  { value: "3", label: "Roles working together" },
-  { value: "20", label: "Credits = $1 raised" },
-  { value: "10", label: "Credits = $1 spent" },
+  { value: "13", label: "Roles working together" },
+  { value: "210", label: "Credits = $1 raised" },
+  { value: "180", label: "Credits = $1 spent" },
   { value: "24/7", label: "Campaign tracking" },
 ];
 
