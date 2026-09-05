@@ -90,4 +90,4 @@ npm run preview
 
 ## Related project
 
-The API and authentication service are documented in [`../server/README.md`](../server/README.md).
+The API and authentication service are documented in [`https://github.com/theashikulakash/RiseFlow-server/README.md`](../server/README.md).
