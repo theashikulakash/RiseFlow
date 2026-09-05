@@ -42,7 +42,11 @@ const Navbar = () => {
 
           {user ? (
             <div className="flex items-center gap-3">
-              <Link to="/profile" className="inline-flex rounded-full ring-2 ring-white shadow-sm hover:ring-teal transition-all">
+              <Link
+                to="/profile"
+                className="inline-flex rounded-full ring-2 ring-white shadow-sm hover:ring-teal transition-all"
+                key={user.photoURL || user.image || user.name}
+              >
                 <img
                   src={user.photoURL || user.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=0F5257&color=fff`}
                   alt={user.name}

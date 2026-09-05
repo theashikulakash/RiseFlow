@@ -4,10 +4,28 @@ import api from "../lib/axios";
 
 const AuthContext = createContext(null);
 
+const normalizeProfile = (data) => {
+  if (!data) return null;
+
+  const image = data.image || data.photoURL || data.avatar || null;
+  const photoURL = data.photoURL || data.image || data.avatar || null;
+
+  return { ...data, image, photoURL };
+};
+
 export const AuthProvider = ({ children }) => {
   const { data: session, isPending } = useSession();
   const [profile, setProfile] = useState(null); // full user doc: role, credits, etc.
   const [profileLoading, setProfileLoading] = useState(true);
+
+  const updateProfile = useCallback((nextProfile) => {
+    setProfile((current) => {
+      const merged = { ...(current || {}), ...(nextProfile || {}) };
+      const image = merged.image || merged.photoURL || merged.avatar || null;
+      const photoURL = merged.photoURL || merged.image || merged.avatar || null;
+      return { ...merged, image, photoURL };
+    });
+  }, []);
 
   const refreshProfile = useCallback(async () => {
     if (!session?.user) {
@@ -17,7 +35,7 @@ export const AuthProvider = ({ children }) => {
     }
     try {
       const { data } = await api.get("/users/me");
-      setProfile(data);
+      setProfile(normalizeProfile(data));
     } catch (err) {
       console.error("Failed to load profile:", err.message);
       setProfile(null);
@@ -40,6 +58,7 @@ export const AuthProvider = ({ children }) => {
     user: profile, // { id, name, email, image, role, credits }
     loading: isPending || profileLoading,
     refreshProfile,
+    updateProfile,
     logout,
   };
 

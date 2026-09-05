@@ -22,7 +22,7 @@ const updateUserImage = async (imageUrl) => {
 };
 
 const UserProfile = () => {
-  const { user, refreshProfile, loading } = useAuth();
+  const { user, refreshProfile, updateProfile, loading } = useAuth();
   const fileInputRef = useRef(null);
   const [uploading, setUploading] = useState(false);
 
@@ -39,6 +39,7 @@ const UserProfile = () => {
       setUploading(true);
       const uploadedUrl = await uploadToImgBB(file);
       await updateUserImage(uploadedUrl);
+      updateProfile({ image: uploadedUrl, photoURL: uploadedUrl });
       await refreshProfile();
       toast.success("Profile picture updated successfully.");
     } catch (error) {
